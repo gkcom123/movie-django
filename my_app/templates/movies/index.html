@@ -1,0 +1,11 @@
+{% extends 'movies/_base.html' %} {% block content %}
+<h1>My Fav Movie By Gunjan Kumar</h1>
+{% if movies %}
+<ul>
+  {%for m in movies%}
+  <li>{{m| title}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No favorite movies...</p>
+{% endif %} {% endblock %}
